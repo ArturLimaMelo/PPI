@@ -160,3 +160,21 @@ pessoa.disciplina = "PPI";
 console.log(pessoa);
 console.log(Object.keys(pessoa));
 pessoa.aniversario = function() {this.idade++; return `Feliz aniversário! Agora eu tenho ${this.idade} anos!`};
+function Pessoa(nome, idade, profissao) {
+this.nome = nome;
+this.idade = idade;
+this.profissao = profissao;
+this.saudacao = function(){
+    return `olá, meu nome é: ${this.nome}!`
+};
+this.aniversario = function() {
+    this.idade++; return `Feliz aniversário! Agora eu tenho ${this.idade} anos!`;
+}
+};
+p1 = new Pessoa("Alex", 22, "Arquiteto");
+console.log(p1);
+const p1_e = {...p1, email: "alex@alex.com"};
+console.log(p1_e.email);
+
+const {nome, email} = p1_e;
+console.log(nome, email);
