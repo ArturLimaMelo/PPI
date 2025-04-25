@@ -145,3 +145,18 @@ let soma = 0;
 
 // Objects
 
+const pessoa = {
+    nome: "Guilherme",
+    idade: 30,
+    profissao: "Professor",
+    saudacao: function() {return `olá, meu nome é: ${this.nome}!`},
+};
+console.log(pessoa.nome);
+console.log(pessoa["idade"]);
+console.log(Object.keys(pessoa));
+console.log(Object.values(pessoa));
+console.log(pessoa.saudacao);
+pessoa.disciplina = "PPI";
+console.log(pessoa);
+console.log(Object.keys(pessoa));
+pessoa.aniversario = function() {this.idade++; return `Feliz aniversário! Agora eu tenho ${this.idade} anos!`};
