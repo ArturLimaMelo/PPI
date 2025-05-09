@@ -5,7 +5,7 @@ class Carrinho {
   
     calcularTotal() {
         const valores = this.itens.map(item => item.price * item.quantity);
-        return valores.reduce((total, valor) => total + valor, 0);
+        return valores.reduce((total, valor) => total + valor, 0).toFixed(2);
     }
   
     filtrarPorCategoria(categoria) {
