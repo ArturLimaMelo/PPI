@@ -9,7 +9,7 @@ class Carrinho {
     }
   
     filtrarPorCategoria(categoria) {
-        return this.itens.filter(item => item.category === categoria);
+        return this.itens.filter(item => item.category.toUpperCase() === categoria.toUpperCase());
     }
   
     ordenarPorPrecoDecrescente() {
@@ -37,7 +37,7 @@ const carrinho = new Carrinho([
 ]);
 
 console.log("Valor total do carrinho: " + carrinho.calcularTotal());
-console.log("Carrinho filtrado pela categoria 'Macbook'\n" + carrinho.filtrarPorCategoria("Macbook"));
+console.log("Carrinho filtrado pela categoria 'Macbook'\n" + carrinho.filtrarPorCategoria("Macbook").map((item) => item.name);
 console.log("preço do maior para o menor:", carrinho.ordenarPorPrecoDecrescente());
 console.log("do menor para o maior", carrinho.ordenarPorPrecoCrescente());
 console.log("Ordenado por ordem alfabética:", carrinho.ordenarPorNome());
